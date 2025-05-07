@@ -27,14 +27,14 @@
             // |  ESC  |  Q  |  W  |  F   |  P   |  B   |                   |  J   |  L    |  U    |  Y   |   ;   | BKSPC |
             // |  TAB  |  A  |  R  |  S   |  T   |  G   |                   |  M   |  N    |  E    |  I   |   O   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  D   |  V   |  MUTE  |  | ADJUST|  K   |  H    |  ,    |  .   |   /   | SHIFT |
-            //              |LOWER | ALT  | CTRL | RAISE|  ENTER |  | RAISE | SPACE| CTRL  | ALT   | LOWER|
+            //              |LOWER | ALT  | CTRL | ENTER|  RAISE |  | RAISE | SPACE| CTRL  | ALT   | LOWER|
 
             bindings = <
 &kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                          &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &kp MINUS
 &kp ESC    &kp Q   &kp W   &kp F     &kp P      &kp B                           &kp J      &kp L      &kp U      &kp Y     &kp SEMICOLON  &kp BSPC
 &kp TAB    &kp A   &kp R   &kp S     &kp T      &kp G                           &kp M      &kp N      &kp E      &kp I     &kp O          &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp D      &kp V    &kp C_MUTE   &mo 3     &kp K      &kp H      &kp COMMA  &kp DOT   &kp FSLH       &kp RSHFT
-                   &mo 1   &kp LALT  &kp LCTRL  &mo 2    &kp ENTER    &kp SPACE &mo 2      &kp RCTRL  &kp RALT   &mo 1
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp D      &kp V     &kp C_MUTE   &mo 3    &kp K      &kp H      &kp COMMA  &kp DOT   &kp FSLH       &kp RSHFT
+                   &mo 1   &kp LALT  &kp LCTRL  &kp ENTER &mo 2        &mo 2    &kp SPACE  &kp RCTRL  &kp RALT   &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
