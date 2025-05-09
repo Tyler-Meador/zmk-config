@@ -22,7 +22,7 @@
         compatible = "zmk,conditional-layers";
         qwerty_layer {
             if-layers = <LOWER RAISE>;
-            then-layer = <QWERTY>;
+            then-layer = <ADJUST>;
         };
     };
 
@@ -36,14 +36,14 @@
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   -   |
             // |  ESC  |  Q  |  W  |  F   |  P   |  B   |                   |  J   |  L    |  U    |  Y   |   ;   | BKSPC |
             // |  TAB  |  A  |  R  |  S   |  T   |  G   |                   |  M   |  N    |  E    |  I   |   O   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |  MUTE  |  | ADJUST|  K   |  H    |  ,    |  .   |   /   | SHIFT |
+            // | SHIFT |  Z  |  X  |  C   |  D   |  V   |  MUTE  |  | QWERTY|  K   |  H    |  ,    |  .   |   /   | SHIFT |
             //              |LOWER | ALT  | CTRL | ENTER|  RAISE |  | RAISE | SPACE| CTRL  | ALT   | LOWER|
 
             bindings = <
 &kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                          &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &kp MINUS
 &kp ESC    &kp Q   &kp W   &kp F     &kp P      &kp B                           &kp J      &kp L      &kp U      &kp Y     &kp SEMICOLON  &kp BSPC
 &kp TAB    &kp A   &kp R   &kp S     &kp T      &kp G                           &kp M      &kp N      &kp E      &kp I     &kp O          &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp D      &kp V     &kp C_MUTE   &mo 3    &kp K      &kp H      &kp COMMA  &kp DOT   &kp FSLH       &kp RSHFT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp D      &kp V     &kp C_MUTE   &tog 4    &kp K      &kp H      &kp COMMA  &kp DOT   &kp FSLH       &kp RSHFT
                    &mo 1   &kp LALT  &kp LCTRL  &kp ENTER &mo 2        &mo 2    &kp SPACE  &kp RCTRL  &kp RALT   &mo 1
             >;
 
@@ -124,7 +124,7 @@
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B      &kp C_MUTE &none      &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &mo BASE &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
+                 &tog 1 &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
